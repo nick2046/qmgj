@@ -1,0 +1,113 @@
+
+app.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+	// 官网首页
+	$urlRouterProvider.otherwise('homepage');
+	$stateProvider
+	// .state('home',{
+	// 	url:"/home",
+	// 	templateUrl:'home.html',
+	// 	controller:'homeController'
+	// })
+	.state('homepage',{
+		url:'/homepage',
+		templateUrl:'homepage.html',
+		controller:'homepageController'
+	})
+	.state('login',{
+		url:'/login',
+		templateUrl:'view/login.html',
+		controller:'loginController'
+	})
+	.state('logon',{
+		url:'/logon',
+		templateUrl:'view/logon.html',
+		controller:'logonController'
+	})
+	.state('forget',{
+		url:'/forget',
+		templateUrl:'view/forget.html',
+		controller:'forgetController'
+	})
+	.state('itemlist',{
+		url:'/itemlist',
+		templateUrl:'view/itemlist.html',
+		controller:'itemlistController'
+	})
+	.state('itemcontent',{
+		url:'/itemcontent',
+		templateUrl:'view/itemcontent.html',
+		controller:'itemcontentController'
+	})
+	.state('itemcontent.img',{
+		url:'/img',
+		templateUrl:'view/img.html',
+		controller:'imgController'
+	})
+	.state('itemcontent.develop',{
+		url:'/develop',
+		templateUrl:'view/develop.html',
+		controller:'developController'
+	})
+	.state('pay',{
+		url:'/pay',
+		templateUrl:"view/pay.html",
+		controller:'payController'
+	})
+	.state('pay2',{
+		url:'/pay2',
+		templateUrl:"view/pay2.html",
+		controller:'pay2Controller'
+	})
+	.state('pay3',{
+		url:'/pay3',
+		templateUrl:"view/pay3.html",
+		controller:'pay3Controller'
+	})
+	.state('personalhomepage',{
+		url:'/personalhomepage',
+		templateUrl:'view/personalhomepage.html',
+		controller:'personalhomepageController'
+	})
+	.state('personalhomepage.personal',{
+		url:'/personal',
+		templateUrl:'view/personal.html',
+		controller:'personalController'
+	})
+	.state('personalhomepage.personalmessage',{
+		url:'/personalmessage',
+		templateUrl:'view/personalmessage.html',
+		controller:'personalmessageController'
+	})
+	.state('personalhomepage.personalshezhi',{
+		url:'/personalshezhi',
+		templateUrl:'view/personalshezhi.html',
+		controller:'personalshezhiController'
+	})
+	.state('personalhomepage.personalguanzhu',{
+		url:'/personalguanzhu',
+		templateUrl:'view/personalguanzhu.html',
+		controller:'personalguanzhuController'
+	})
+	.state('personalhomepage.personaljilu',{
+		url:'/personaljilu',
+		templateUrl:'view/personaljilu.html',
+		controller:'personaljiluController'
+	})
+	.state('personalhomepage.personalshezhi.password',{
+		url:'/password',
+		templateUrl:'view/password.html',
+		controller:'passwordController'
+	})
+	.state('personalhomepage.personalshezhi.renzheng',{
+		url:'/renzheng',
+		templateUrl:'view/renzheng.html',
+		controller:'renzhengController'
+	})
+	.state('personalhomepage.personalshezhi.youxiang',{
+		url:'/youxiang',
+		templateUrl:'view/youxiang.html',
+		controller:'youxiangController'
+	})
+	
+}]);
+

@@ -1,0 +1,24 @@
+<div ng-controller="logonController" class="container">
+	<div class="logon">
+	<form ng-model="form" name="form"  method="get" accept-charset="utf-8" novalidate>
+		<h2>登录</h2>
+		<input class="phone" ng-model="phone" type="text" name="phone" ng-pattern='/^(1[^012][0-9]{9})$/' placeholder="请输入您的手机号码">
+		<p ng-show="form.phone.$error.pattern">您输入的号码有误，请检查！</p>	
+		<input class="passWord" ng-model="passWord" type="password" name="passWord" value="" placeholder="请输入您的密码">
+		<p>密码错误,请重新输入 <a class="forgetPs" ui-sref="forget">忘记密码?</a> </p>
+		<button type="submit">登录</button>
+		<span class="checkbox"></span>
+		<span>记住我</span>
+
+	</form>
+		<img class="login3" src="img/login-3.png" alt="">
+			<div class="icon-box" >
+				<img class="icon" src="img/qq.png" alt="">
+				<img class="icon" src="img/weibo.png" alt="">
+				<img class="icon" src="img/whatcan.png" alt="">
+			</div>		
+		<div class="txt">
+			<p>新用户?<span>立即注册</span></p>
+		</div>
+	</div>
+</div>

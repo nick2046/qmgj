@@ -1,0 +1,23 @@
+<div class="personal-top" ng-controoler="personalhomepageController">
+	<div class="personal-top-left">
+		<img src="../img/touxiang.png" alt="">
+		<img class="icon" src="../img/phone.png" alt="">
+		<img class="icon" src="../img/message.png" alt="">
+		<img class="icon" src="../img/personal.png" alt="">
+	</div>
+	<div class="personal-top-right">
+		<div class="right-title">
+			<b>用户HZ17363525</b>
+			<span>下午好！</span>
+		</div>
+		<span>账户安全等级：</span>
+		<img src="../img/middle.png" alt="">
+		<p>上次登录时间：2015-09-15 18：29：49</p>
+	</div>
+</div>
+<div class="personal-bottom" ng-controoler="personalhomepageController">
+	<ul class="personal-nav">
+		<li ng-class="$index==show" ng-click="showIndex($index)" ui-sref="{{nav.view}}" ng-repeat="nav in nav">{{nav.name}}</li>
+	</ul>
+	<div class="personal-bottom-right" ui-view></div>
+</div>

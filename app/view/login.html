@@ -1,0 +1,27 @@
+<div ng-controller="loginController" class="container">
+	<div class="login">
+		<form ng-model="form" name="form" action="login_submit"  method="get" accept-charset="utf-8" novalidate>
+			<h2>注册</h2>
+			<input class="phone" ng-model="phone" type="text" name="phone" placeholder="请输入您的手机号码" required ng-pattern="/^(1[^012][0-9]{9})$/">
+			<p ng-show="form.phone.$dirty && form.phone.$error.required">必填项！</p>
+			<p ng-show="form.phone.$error.pattern">你输入的号码有误，请检查！</p>
+			<input class="authCode" ng-model="authCode" type="text" name="authCode" placeholder="请输入验证码">
+			<a class="authCode2" href="#">已发送,60秒后重发</a>
+			<p ng-show="form.authCode.$error">验证码错误,请重新输入！</p>
+			<input class="password" ng-minlength="6" ng-model="password" type="password" name="password" placeholder="请输入密码,不小于6位">
+			<p ng-show="form.password.$error.minlength">请输入大于6位的密码！</p>
+			<button type="submit">注册</button>
+			<span class="checkbox"></span>
+			<span>同意《全民创造用户协议》</span>
+		</form>
+			<img class="login3" src="img/login-3.png" alt="">
+			<div class="icon-box" >
+				<img class="icon" src="img/qq.png" alt="">
+				<img class="icon" src="img/weibo.png" alt="">
+				<img class="icon" src="img/whatcan.png" alt="">
+			</div>		
+	<div class="txt">
+		<p>已有账户?<span>登录</span></p>
+	</div>
+	</div>
+</div>

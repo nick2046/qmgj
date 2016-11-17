@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="forget">
+		<form ng-model="form" name="form" method="get" accept-charset="utf-8" novalidate>
+			<h2>找回密码</h2>
+			<input class="phone" ng-model="phone" ng-pattern='/^(1[^012][0-9]{9})$/' type="text" name="phone" placeholder="请输入您的手机号码">
+			<p ng-show="form.phone.$error.pattern">您输入的号码有误,请检查</p>
+			<input class="authCode" ng-model="authCode" type="text" name="authCode" placeholder="请输入验证码">
+			<a class="authCode2" href="#">已发送,60秒后重发</a>
+			<p ng-show="form.authCode.$error">验证码错误,请重新输入！</p>
+			<button type="submit">找回密码</button>
+		</form>
+		<div class="txt">
+			<p>新用户?<span>立即注册</span></p>
+		</div>
+	</div>
+</div>
